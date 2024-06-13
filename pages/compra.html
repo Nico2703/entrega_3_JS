@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Compra </title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header> 
+        <div class="logohead">
+            <h1> TIENDA </h1>
+            <h2> JAVASCRIPT </h2> 
+        </div> 
+        <nav> 
+            <ul>
+                <li><a href= "../index.html"> HOME </a></li>
+                <li><a href= "./producto.html"> PRODUCTOS </a></li>
+                <li><a style="text-decoration: underline;" href= "#"> Pedidos </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="height: 600px;">
+        <h3 style="margin: 20px 50px; color: cadetblue;"> -- Ingreso / Lista de pedidos --</h3>
+
+        <table id="tablaPedidos">
+            <thead>
+                <tr>
+                    <th> Producto </th>
+                    <th> Precio unitario</th>
+                    <th> Cantidad</th>
+                    <th> Precio final (+IVA)</th> 
+                </tr>
+            </thead>
+        </table> 
+
+        <table id="tablaMedia">
+            <thead>
+                <tr>
+                    <th> Envío </th>
+                    <th> Importe a pagar</th>
+                </tr>
+            </thead>
+        </table>
+
+        <form id="form_in">
+            <fieldset>
+                <label for="opciones_2">Envío</label>
+                <select id="opciones_2" style="background-color: antiquewhite;">
+                </select>
+            </fieldset>
+            <input id="botonConfirma" style="margin-top: 20px; padding: 10px; background-color: antiquewhite;" type="submit" value="Confirmar compra">
+        </form>
+
+        <table id="tablaFinal">
+        </table>
+    </main>
+
+    <footer id="footer" style="height: 100px;">
+        <h3> Realizado para el curso de JavaScript - Coderhouse </h3>
+    </footer>
+
+    <script src="../js/model_script.js"></script>  
+    <script src="../js/function_script.js"></script> 
+    <script src="../js/carga_script.js"></script> 
+    <script src="../js/pedido_script.js"></script> 
+</body>
+</html>

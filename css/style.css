@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logohead{
+    margin: 20px 120px;
+    color: antiquewhite;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial
+}
+
+nav ul{
+    margin-left: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li{
+    justify-content: center;
+}
+
+nav ul li a{
+    font-size: large;
+    color: antiquewhite;
+    text-decoration-line: none;
+    padding: 40px;
+}
+
+nav ul li a:hover{
+    color:cadetblue;
+}
+
+header h2{
+    color: antiquewhite;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main h2{
+    color: cadetblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration-line: overline;
+    padding: 20px 20px ;
+}
+
+body{
+    background-image: linear-gradient(black, grey);
+}
+
+#tablaPedidos{
+    margin: 40px 30px;
+}
+
+#tablaPedidos thead tr th{
+    color: cadetblue;
+    padding: 10px 20px;
+    text-decoration-line: underline;
+}
+
+#tablaPedidos tbody tr td{
+    padding: 0px 20px;
+    color: white;
+}
+
+#tablaMedia{
+    margin: 40px 30px;
+}
+
+#tablaMedia tr th{
+    color: cadetblue;
+    padding: 10px 20px;
+    text-decoration-line: underline;
+}
+
+#tablaMedia tbody tr td{
+    padding: 0px 20px;
+    color: white;
+}
+
+#tablaFinal{
+    margin: 40px 30px;
+}
+
+#tablaFinal tr th{
+    color: cadetblue;
+    padding: 10px 20px;
+    text-decoration-line: underline;
+}
+
+#tablaFinal tbody tr td{
+    padding: 0px 20px;
+    color: white;
+    list-style-type: disc;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+}
+
+footer h3{
+    color: antiquewhite;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form{
+    width: 30%;
+    padding: 10px 50px 0px 50px;
+}
+
+form fieldset{
+    display: flex;
+    flex-direction: column;
+    color: antiquewhite;
+}
+
+#botonAgregar:hover{
+    color: white;
+}

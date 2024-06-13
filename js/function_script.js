@@ -48,12 +48,7 @@ function agregarPedido(id, cantidad) {
         pedidoItem.precioFinal = pedidoItem.cantidad * producto.precio;
     } else {
         pedidos.push({
-            id: producto.id,
-            nombre: producto.nombre,
-            categoria: producto.categoria,
-            descripcion: producto.descripcion,
-            marca: producto.marca,
-            precio: producto.precio,
+            ...producto,
             cantidad: cantidad,
             precioFinal: parseFloat((cantidad * producto.precio) * 1.21)
         });

@@ -54,8 +54,11 @@
                 <label for="opciones_2">Envío</label>
                 <select id="opciones_2" style="background-color: antiquewhite;">
                 </select>
-            </fieldset>
-            <input id="botonConfirma" style="margin-top: 20px; padding: 10px; background-color: antiquewhite;" type="submit" value="Confirmar compra">
+            </fieldset> 
+            <div style="display: flex; flex-direction: row;">
+                <input id="botonConfirma" style="margin: 20px 0px; padding: 20px; background-color: antiquewhite;" type="submit" value="Terminar compra">
+                <input id="botonLimpia" style="margin: 20px 20px; padding: 20px; background-color: antiquewhite;" type="reset" value="Cancelar compra" onclick="sessionStorage.clear(), location.reload();"> 
+            </div>
         </form>
 
         <table id="tablaFinal">
@@ -66,6 +69,7 @@
         <h3> Realizado para el curso de JavaScript - Coderhouse </h3>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     <script src="../js/model_script.js"></script>  
     <script src="../js/function_script.js"></script> 
     <script src="../js/carga_script.js"></script> 

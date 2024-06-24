@@ -70,20 +70,10 @@ const envio = [
 ];
 
 let pedidos = cargaPedidosSessionStorage();
-let compras = cargaComprasSessionStorage();
+let compras = cargaComprasLocalStorage();
 
 document.addEventListener('DOMContentLoaded', () => {
-    var confirmarBoton = document.getElementById('botonConfirma');
-
-    var confirmadoEnSession = sessionStorage.getItem("confirmado");
-
-    !confirmadoEnSession ? confirmarBoton.style.display = "block" : confirmarBoton.style.display = "none";
-    !confirmadoEnSession ? mostrarPedido() : null;
-    
-    confirmarBoton.addEventListener("click", function() {
-        confirmarBoton.style.display = "none";
-        sessionStorage.setItem("confirmado", "true");
-    });
+    mostrarPedido();
 });
 
 const tablaPedidos = document.getElementById('tablaPedidos');

@@ -7,13 +7,13 @@ function guardarPedidoSessionStorage() {
     sessionStorage.setItem('pedidos', JSON.stringify(pedidos));
 }
 
-function cargaComprasSessionStorage() {
-    const compras = sessionStorage.getItem('compras');
+function cargaComprasLocalStorage() {
+    const compras = localStorage.getItem('compras');
     return compras ? JSON.parse(compras) : [];
 }
 
-function guardarCompraSessionStorage() {
-    sessionStorage.setItem('compras', JSON.stringify(compras));
+function guardarCompraLocalStorage() {
+    localStorage.setItem('compras', JSON.stringify(compras));
 }
 
 function cargaProductosLocalStorage() {
@@ -35,6 +35,14 @@ function agregarPedido(id, cantidad) {
     cantidadStock.setAttribute("style", "margin: 50px 50px; color: cadetblue; font-size: large; font-weight: bolder;  text-decoration-line: overline;");
     if (producto.stock < 0) {
         cantidadStock.innerHTML = `<p> -- Sin stock disponible de ${producto.nombre} -- </p>`;
+        
+        Swal.fire({
+            position: "center",
+            icon: "error",
+            title: `Stock no disponible de ${producto.nombre}`,
+            showConfirmButton: false,
+            timer: 1000
+        });
         return;
     }
     else{
@@ -63,8 +71,8 @@ function mostrarPedido() {
         contenedor.innerHTML = `<td> ${item.nombre} </td>
                                 <td> $${item.precio} </td>
                                 <td> ${item.cantidad} </td>
-                                <td> $${item.precioFinal.toFixed(2)} </td>`;
-        tablaBody_Pedidos.appendChild(contenedor);
+                                <td> $${item.precioFinal.toFixed(2)} </td>`;  
+    tablaBody_Pedidos.appendChild(contenedor);                          
     });
 }
 
@@ -79,3 +87,8 @@ function mostrarHora(){
     footerTime.style.marginTop = '20px';
 }
 mostrarHora();
+
+function redirigirURL() {
+    var newWindow = window.open();
+    newWindow.location.href = 'https://www.johnniewalker.com/es-ar/';
+}

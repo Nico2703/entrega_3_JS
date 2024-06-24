@@ -6,7 +6,6 @@ main.style.flexDirection = 'column';
 let contenedor = document.createElement('div');
 contenedor.innerHTML = `<h2> Listado de productos disponibles </h2>
                         <h2> Registro de pedidos </h2>
-                        <h2> Compra única por sesión </h2>
                         <button style="margin: 60px 20px; padding: 20px;" onclick="localStorage.clear(); sessionStorage.clear();"> Reset "local/session" storage / Para prueba</button>`
 contenedor.style.width = '40%';
 contenedor.addEventListener('mouseover', () => {

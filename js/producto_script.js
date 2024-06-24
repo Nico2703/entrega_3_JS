@@ -12,7 +12,7 @@ for (const producto of productos) {
                             <h5 style='padding-bottom: 10px;'> ${producto.marca} </h5> 
                             <h5> Precio: $${producto.precio} </h5>
                             <h5> Stock: ${producto.stock} </h5>
-                            <button class="botonAgregar" style='margin-top: 10px; background-color: cadetblue;' onclick="agregarPedido(${producto.id}, 1)"> Agregar a Pedidos </button>`
+                            <button style='margin-top: 10px; background-color: cadetblue;' onclick="agregarPedido(${producto.id}, 1)"> Agregar a Pedidos </button>`
     contenedor.style.width = '15%';
     contenedor.style.border = '2px solid cadetblue';
     contenedor.style.padding = '10px';

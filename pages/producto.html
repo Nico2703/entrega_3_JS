@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Producto </title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="../favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -28,7 +29,7 @@
     </header>
     <main style="height: 600px;">
         <h3 style="margin: 20px 50px; color: cadetblue;"> -- Lista de productos --</h3>
-        <div id="cards">  
+        <div id="cards" data-aos="flip-up">  
         </div>
         <div id="stock">
         </div>
@@ -38,9 +39,14 @@
         <h3> Realizado para el curso de JavaScript - Coderhouse </h3>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/model_script.js"></script>  
     <script src="../js/function_script.js"></script> 
     <script src="../js/carga_script.js"></script> 
     <script src="../js/producto_script.js"></script>  
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
